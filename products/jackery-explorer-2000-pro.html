@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Updated Title Tag -->
     <title>Jackery Explorer 2000 Pro Specs & Review</title>
-    
+    <link rel="icon" type="image/png" href="../static/favicon.png">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b16cb15a-fcdf-47c8-b941-422b134fa2a8"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,7 +28,7 @@
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://www.amazon.com/s?k=Jackery%20Explorer%202000%20Pro&tag=your-tag-20",
+        "url": "https://www.amazon.com/s?k=Jackery%20Explorer%202000%20Pro&tag=your-us-tag-20",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       }
@@ -64,7 +65,7 @@
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://www.amazon.com/s?k=Jackery%20Explorer%202000%20Pro&tag=your-tag-20",
+        "url": "https://www.amazon.com/s?k=Jackery%20Explorer%202000%20Pro&tag=your-us-tag-20",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       }
@@ -88,10 +89,42 @@
             </p>
             
             <div style="margin-top: 30px;">
-                <a href="https://www.amazon.com/s?k=Jackery%20Explorer%202000%20Pro&tag=your-tag-20" target="_blank" rel="nofollow" class="btn btn-primary" style="max-width: 300px; font-size: 1.1rem;">
-                    Check Current Price
+                <a href="https://www.amazon.com/s?k=Jackery%20Explorer%202000%20Pro&tag=your-us-tag-20" 
+                   id="buyBtn"
+                   target="_blank" 
+                   rel="nofollow" 
+                   class="btn btn-primary" 
+                   style="max-width: 300px; font-size: 1.1rem;"
+                   
+                       data-link-global="https://www.amazon.com/s?k=Jackery%20Explorer%202000%20Pro&tag=your-us-tag-20"
+                       data-source-global="Amazon"
+                   
+                       data-link-de="https://www.amazon.de/s?k=Jackery%20Explorer%202000%20Pro&tag=your-germany-tag-21"
+                       data-source-de="Amazon DE"
+                   
+                       data-link-uk="https://www.amazon.co.uk/s?k=Jackery%20Explorer%202000%20Pro&tag=your-uk-tag-21"
+                       data-source-uk="Amazon UK"
+                   
+                       data-link-ca="https://www.amazon.ca/s?k=Jackery%20Explorer%202000%20Pro&tag=your-canada-tag-20"
+                       data-source-ca="Amazon CA"
+                   
+                >
+                   Check Price at Amazon
                 </a>
-                <span class="aff-notice">at Amazon</span>
+                <!-- A small region switcher text for manual overriding -->
+    <div style="margin-top: 10px; font-size: 0.85rem; color: var(--text-muted);">
+        <span id="regionLabel">Region: Global</span> 
+        
+        <!-- Only show switchers if we actually have those links -->
+        
+            | <a href="#" onclick="setRegion('de'); return false;">🇩🇪 DE</a>
+        
+        
+            | <a href="#" onclick="setRegion('ca'); return false;">🇨🇦 CA</a>
+        
+        | <a href="#" onclick="setRegion('global'); return false;">🌐 Global</a>
+    </div>
+</div>
             </div>
         </div>
     </div>
@@ -733,13 +766,44 @@
         
     
     </div>
+    <script>
+    function setRegion(region) {
+        var btn = document.getElementById('buyBtn');
+        var label = document.getElementById('regionLabel');
+        
+        // Get the link from the data attribute (e.g. data-link-de)
+        var newLink = btn.getAttribute('data-link-' + region);
+        var newSource = btn.getAttribute('data-source-' + region);
+
+        if (newLink) {
+            btn.href = newLink;
+            btn.innerHTML = "Check Price at " + newSource;
+            label.innerText = "Region: " + region.toUpperCase();
+        }
+    }
+
+    // Auto-detect browser language on load
+    document.addEventListener("DOMContentLoaded", function() {
+        var userLang = navigator.language || navigator.userLanguage; 
+        // userLang is usually "en-US", "de-DE", "fr-FR"
+        
+        if (userLang.includes('de') && document.getElementById('buyBtn').hasAttribute('data-link-de')) {
+            setRegion('de');
+        } else if (userLang.includes('ca') && document.getElementById('buyBtn').hasAttribute('data-link-ca')) {
+            setRegion('ca');
+        }
+        // It defaults to Global (set in HTML) so we don't need an else
+    });
+</script>
 
     </main>
 
     <footer>
         <div class="container">
-            <!-- Updated Footer Text -->
-            <p>&copy; 2026 SolarVS. <br><small>We provide independent comparisons. As an Amazon/Partner associate, we earn from qualifying purchases.</small></p>
+            <p>&copy; 2026 SolarVS.</p> 
+            <p><small>
+                <a href="../about.html">About & Disclosure</a>
+            </small></p>
         </div>
     </footer>
 </body>
