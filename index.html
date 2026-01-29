@@ -31,6 +31,19 @@
         <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Find Your Power.</h1>
         <p style="color: var(--text-muted); font-size: 1.2rem;">Compare specifications of the best portable power stations on the market.</p>
     </div>
+
+    <!-- Brand Filter Buttons -->
+<div class="brand-filters" style="text-align: center; margin-bottom: 20px; gap: 10px; display: flex; flex-wrap: wrap; justify-content: center;">
+    <button onclick="filterByBrand('all')" class="btn btn-secondary" style="width: auto; padding: 5px 15px;">All</button>
+    <button onclick="filterByBrand('Anker')" class="btn btn-secondary" style="width: auto; padding: 5px 15px;">Anker</button>
+    <button onclick="filterByBrand('Bluetti')" class="btn btn-secondary" style="width: auto; padding: 5px 15px;">Bluetti</button>
+    <button onclick="filterByBrand('EcoFlow')" class="btn btn-secondary" style="width: auto; padding: 5px 15px;">EcoFlow</button>
+    <button onclick="filterByBrand('Jackery')" class="btn btn-secondary" style="width: auto; padding: 5px 15px;">Jackery</button>
+    <!-- Add other major brands here -->
+</div>
+
+<!-- Existing Search Bar -->
+
     <div style="max-width: 600px; margin: 0 auto 30px auto; position: relative;">
         <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search for Anker, Bluetti, EcoFlow..." 
         style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 50px; font-size: 1.1rem; padding-left: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); outline: none;">
@@ -37447,6 +37460,18 @@ function filterProducts() {
             }
         }
     }
+}
+
+// NEW FUNCTION: Click a button to filter
+function filterByBrand(brand) {
+    var searchInput = document.getElementById('searchInput');
+    if (brand === 'all') {
+        searchInput.value = '';
+    } else {
+        searchInput.value = brand;
+    }
+    // Trigger the existing filter function
+    filterProducts();
 }
 </script>
 
