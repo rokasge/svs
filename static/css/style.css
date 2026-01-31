@@ -2,12 +2,12 @@
     /* Color Palette */
     --primary: #2563eb;       /* Trustworthy Blue */
     --primary-dark: #1e40af;
-    --accent: #f97316;        /* High-conversion Orange for buttons */
-    --accent-hover: #ea580c;
+    --accent: #ea580c;        
+    --accent-hover: #c2410c;
     --bg-body: #f8fafc;       /* Very light grey-blue */
     --bg-card: #ffffff;
     --text-main: #0f172a;     /* Dark Slate */
-    --text-muted: #64748b;
+    --text-muted: #475569; 
     --border: #e2e8f0;
     
     /* Spacing */
