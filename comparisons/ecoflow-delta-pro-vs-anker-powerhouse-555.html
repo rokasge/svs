@@ -32,17 +32,68 @@
     <h2 class="text-center">EcoFlow Delta Pro <span class="vs">vs</span> Anker PowerHouse 555</h2>
     
     <div class="comparison-container">
+        <!-- PRODUCT 1 -->
         <div class="comparison-col">
-        	<img src="../images/ecoflow_delta_pro.jpg" alt="EcoFlow Delta Pro" class="product-img" loading="lazy">
+            <img src="../images/ecoflow_delta_pro.jpg" alt="EcoFlow Delta Pro" class="product-img" loading="lazy">
             <h3>EcoFlow Delta Pro</h3>
             <p><strong>3600 Wh</strong></p>
-            <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2743958&ued=https%3A%2F%2Fus.ecoflow.com%2Fsearch%3Fq%3DEcoFlow%2520Delta%2520Pro" target="_blank" class="btn btn-primary">Find Best Deal</a>
+            
+            <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2743958&ued=https%3A%2F%2Fus.ecoflow.com%2Fsearch%3Fq%3DEcoFlow%2520Delta%2520Pro" 
+               target="_blank" 
+               rel="nofollow" 
+               class="btn btn-primary dynamic-aff-btn"
+               
+                   data-link-global="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2743958&ued=https%3A%2F%2Fus.ecoflow.com%2Fsearch%3Fq%3DEcoFlow%2520Delta%2520Pro"
+                   data-source-global="EcoFlow Official"
+               
+                   data-link-de="https://www.amazon.de/s?k=EcoFlow%20Delta%20Pro&tag=your-germany-tag-21"
+                   data-source-de="Amazon DE"
+               
+                   data-link-uk="https://www.amazon.co.uk/s?k=EcoFlow%20Delta%20Pro&tag=your-uk-tag-21"
+                   data-source-uk="Amazon UK"
+               
+                   data-link-ca="https://www.amazon.ca/s?k=EcoFlow%20Delta%20Pro&tag=your-canada-tag-20"
+                   data-source-ca="Amazon CA"
+               
+            >
+                Find Best Deal 
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+            </a>
+            <span class="aff-notice dynamic-aff-source">at EcoFlow Official</span>
         </div>
+
+        <!-- PRODUCT 2 -->
         <div class="comparison-col">
-        	<img src="../images/anker_powerhouse_555.jpg" alt="Anker PowerHouse 555" class="product-img" loading="lazy">
+            <img src="../images/anker_powerhouse_555.jpg" alt="Anker PowerHouse 555" class="product-img" loading="lazy">
             <h3>Anker PowerHouse 555</h3>
             <p><strong>1024 Wh</strong></p>
-            <a href="https://ankersolix.pxf.io/c/6914951/2241990/29130?u=https%3A%2F%2Fwww.ankersolix.com%2Fsearch%3Fq%3DAnker%2520PowerHouse%2520555" target="_blank" class="btn btn-primary">Find Best Deal</a>
+            
+            <a href="https://ankersolix.pxf.io/c/6914951/2241990/29130?u=https%3A%2F%2Fwww.ankersolix.com%2Fsearch%3Fq%3DAnker%2520PowerHouse%2520555" 
+               target="_blank" 
+               rel="nofollow" 
+               class="btn btn-primary dynamic-aff-btn"
+               
+                   data-link-global="https://ankersolix.pxf.io/c/6914951/2241990/29130?u=https%3A%2F%2Fwww.ankersolix.com%2Fsearch%3Fq%3DAnker%2520PowerHouse%2520555"
+                   data-source-global="Anker Official"
+               
+                   data-link-de="https://www.amazon.de/s?k=Anker%20PowerHouse%20555&tag=your-germany-tag-21"
+                   data-source-de="Amazon DE"
+               
+                   data-link-uk="https://www.amazon.co.uk/s?k=Anker%20PowerHouse%20555&tag=your-uk-tag-21"
+                   data-source-uk="Amazon UK"
+               
+                   data-link-ca="https://www.amazon.ca/s?k=Anker%20PowerHouse%20555&tag=your-canada-tag-20"
+                   data-source-ca="Amazon CA"
+               
+            >
+                Find Best Deal  
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+            </a>
+            <span class="aff-notice dynamic-aff-source">at Anker Official</span>
         </div>
     </div>
 
@@ -312,6 +363,33 @@
             
         </tbody>
     </table>
+
+<script>
+// DYNAMIC LINK LOGIC
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll('.dynamic-aff-btn');
+    var userLang = navigator.language || navigator.userLanguage; 
+    var targetRegion = null;
+
+    if (userLang.includes('de')) targetRegion = 'de';
+    else if (userLang.includes('ca')) targetRegion = 'ca';
+
+    if (targetRegion) {
+        buttons.forEach(function(btn) {
+            if (btn.hasAttribute('data-link-' + targetRegion)) {
+                // Swap Link
+                btn.href = btn.getAttribute('data-link-' + targetRegion);
+                // Swap "at Source" text
+                var sourceSpan = btn.nextElementSibling;
+                var newSource = btn.getAttribute('data-source-' + targetRegion);
+                if (sourceSpan && sourceSpan.classList.contains('dynamic-aff-source') && newSource) {
+                    sourceSpan.innerText = "at " + newSource;
+                }
+            }
+        });
+    }
+});
+</script>
 
     </main>
 
