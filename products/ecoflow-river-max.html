@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Title Tag -->
     <title>EcoFlow River Max Specs & Review</title>
+    
+    <!-- NEW: Meta Description Block -->
+    <meta name="description" content="Power your life on the go with the EcoFlow River Max, engineered for modern energy demands. It features a substantial 576Wh internal battery. The AC...">
+
     <link rel="icon" type="image/png" href="../static/favicon.png">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b16cb15a-fcdf-47c8-b941-422b134fa2a8"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/style.css">
     
     
@@ -52,11 +52,13 @@
 <body>
     <header>
         <div class="container header-content">
-            <!-- Updated Logo Text -->
-            <h1 class="logo"><a href="../index.html">⚡ SolarVS</a></h1>
+            <!-- FIXED: Changed h1 to div to prevent multiple H1 error -->
+            <div class="logo" style="font-size: 2rem; font-weight: bold;">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">⚡ SolarVS</a>
+            </div>
             <nav>
                 <a href="../index.html">All Models</a>
-                <a href="../blog.html">Guides</a> <!-- NEW -->
+                <a href="../blog.html">Guides</a>
             </nav>
         </div>
     </header>
@@ -117,13 +119,17 @@
                 Perfect for camping and outdoors.
             </p>
             
-            <div style="margin-top: 30px;">
+            <!-- 
+               FIX: Moved "max-width: 300px" to this container div.
+               Now the text is forced to stay exactly under the button.
+            -->
+            <div style="margin-top: 30px; max-width: 300px;">
                 <a href="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2743958&ued=https%3A%2F%2Fus.ecoflow.com%2Fsearch%3Fq%3DEcoFlow%2520River%2520Max" 
                    id="buyBtn"
                    target="_blank" 
                    rel="nofollow" 
                    class="btn btn-primary" 
-                   style="max-width: 300px; font-size: 1.1rem;"
+                   style="width: 100%; font-size: 1.1rem;" 
                    
                        data-link-global="https://www.awin1.com/cread.php?awinmid=59181&awinaffid=2743958&ued=https%3A%2F%2Fus.ecoflow.com%2Fsearch%3Fq%3DEcoFlow%2520River%2520Max"
                        data-source-global="EcoFlow Official"
@@ -143,7 +149,8 @@
                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                    </svg>
                 </a> 
-                <span id="affSource" class="aff-notice dynamic-aff-source">at EcoFlow Official</span>
+                <!-- Added display:block and text-align:center to ensure it centers relative to the button -->
+                <span id="affSource" class="aff-notice" style="font-size: 0.8em; color: #999; display: block; text-align: center; margin-top: 5px;">at EcoFlow Official</span>
             </div>
         </div>
     </div>
